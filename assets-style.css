@@ -1,0 +1,224 @@
+body {
+    font-family: 'Sarabun', Arial, sans-serif;
+    background: linear-gradient(135deg, #fff 0%, #fffbe7 60%, #ff6600 100%);
+    margin: 0;
+    min-height: 100vh;
+    color: #222;
+}
+.header {
+    display: flex;
+    align-items: center;
+    background: #ff6600;
+    color: #fff;
+    padding: 18px 32px 18px 24px;
+    border-radius: 0 0 22px 22px;
+    box-shadow: 0 4px 16px #2228;
+    margin-bottom: 12px;
+}
+.logo-left, .user-profile-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-right: 32px;
+    box-shadow: 0 2px 8px #fff7;
+    background: #fff;
+    border-radius: 50%;
+    border: 7px solid #222;
+}
+.header h1 {
+    font-size: 2.1em;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 1px 3px 10px #ff660088;
+    letter-spacing: 2px;
+}
+.main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 32px auto 0;
+    flex-wrap: wrap;
+}
+.main-menu a, .logout-btn {
+    background: #fff;
+    color: #222;
+    font-size: 1.15em;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 13px 32px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px #ff660044;
+    transition: background .2s, color .2s;
+    border: 2px solid #ff6600;
+    margin-bottom: 10px;
+}
+.main-menu a:hover, .logout-btn:hover {
+    background: #222;
+    color: #ff6600;
+    border-color: #222;
+}
+.welcome-section {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px 36px 32px 36px;
+    box-shadow: 0 2px 16px #2222;
+    text-align: center;
+}
+.welcome-section h2 {
+    color: #ff6600;
+    font-size: 2em;
+    margin-bottom: 12px;
+}
+.welcome-section p {
+    color: #222;
+    font-size: 1.15em;
+}
+
+.user-profile-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff6600;
+    background: #fff;
+    box-shadow: 0 2px 8px #ff660044;
+}
+.info, .container, .form-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 18px #ff660044;
+    padding: 32px 32px 24px 32px;
+    font-size: 1.15em;
+    color: #222;
+    margin: 38px auto 0;
+    max-width: 640px;
+}
+
+table {
+    width: 96%;
+    margin: 32px auto 0;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px #2222;
+}
+th, td {
+    padding: 13px;
+    border-bottom: 1px solid #ff660088;
+    text-align: center;
+    font-size: 1.06em;
+}
+th {
+    background: #222;
+    color: #ff6600;
+    font-weight: 700;
+    font-size: 1.12em;
+}
+tr:last-child td {
+    border-bottom: none;
+}
+a.back-link, .action-btn, button {
+    display: inline-block;
+    background: #ff6600;
+    color: #fff;
+    padding: 9px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 12px auto;
+    font-weight: 600;
+    box-shadow: 0 2px 8px #2228;
+    border: none;
+    transition: background .2s;
+    cursor: pointer;
+}
+a.back-link:hover, .action-btn:hover, button:hover {
+    background: #222;
+    color: #ff6600;
+}
+.error {
+    color: #d32f2f;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 1em;
+}
+.success {
+    color: #388e3c;
+    margin-top: 14px;
+}
+
+/* --- จุดที่แก้ไข: เพิ่มสไตล์สำหรับปุ่มในตาราง --- */
+.edit-btn {
+  background-color: #337ab7; /* สีน้ำเงิน */
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+.edit-btn:hover {
+  background-color: #286090; /* สีน้ำเงินเข้มขึ้น */
+}
+.del-btn {
+  background-color: #d9534f; /* สีแดง */
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+.del-btn:hover {
+  background-color: #c9302c; /* สีแดงเข้มขึ้น */
+}
+/* ------------------------------------------- */
+
+@media (max-width: 720px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px 10px;
+    }
+    .logo-left, .user-profile-img {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    .main-menu {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .info, .welcome-section, .container, .form-section {
+        padding: 20px 12px;
+    }
+    table {
+        font-size: 0.9em;
+    }
+    .search-user-form input,
+    .search-order-form input {
+        border: 1.5px solid #ff6600;
+        border-radius: 8px;
+        padding: 9px;
+        font-size: 1em;
+    }
+    .search-user-form button,
+    .search-order-form button {
+        background: #ff6600;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 9px 28px;
+        font-weight: 600;
+        box-shadow: 0 2px 8px #ff660044;
+        transition: background .2s;
+        cursor: pointer;
+        margin-left: 8px;
+    }
+    .search-user-form button:hover,
+    .search-order-form button:hover {
+        background: #fffbe7;
+        color: #ff6600;
+    }
+}
